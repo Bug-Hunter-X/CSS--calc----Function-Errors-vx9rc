@@ -1,0 +1,19 @@
+/* Corrected CSS with proper calc() usage */
+
+.element {
+  width: calc(100% - 20px);
+  /* Correct: Space between operator and value */
+  height: calc(50% + 100px); 
+  /* Correct: Mixed units with proper calculation */
+  margin: calc(1em * 2); /*Correct usage*/
+}
+
+.another-element {
+  width: calc( (100vw - 20px) / 2);
+ /* Correct: Nested expressions with parentheses */
+}
+
+/* Avoid unsupported functions within calc() */
+/*.element {
+  width: calc(100% - round(20));  /* Incorrect: round is not supported*/
+}*/
